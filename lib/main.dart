@@ -1,18 +1,19 @@
+import 'package:audio/screen/MyHomePage.dart';
 import 'package:flutter/material.dart';
-import 'package:music_notes_player_app_setup/views/tune_view.dart';
 
 void main() {
-  runApp(const TuneApp());
+  runApp(const MyApp());
 }
 
-class TuneApp extends StatelessWidget {
-  const TuneApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: TuneView(),
+    return MaterialApp(
+      home: MyHomePage(),
     );
   }
 }
+
