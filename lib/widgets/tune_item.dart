@@ -1,21 +1,31 @@
-import 'package:flutter/material.dart';
-import 'package:music_notes_player_app_setup/models/tune_model.dart';
+import 'package:audio/model/tune.dart';
+import 'package:flutter/cupertino.dart';
 
-class TuneItem extends StatelessWidget {
-  const TuneItem({super.key, required this.tune});
+class audio extends StatelessWidget {
 
-  final TuneModel tune;
+
+
+
+ const audio({super.key, required this.tn,});
+final Tune tn;
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: GestureDetector(
-        onTap: () {
-          tune.playSound();
-        },
+        onTap: tn.playSound,
+
         child: Container(
-          color: tune.color,
+
+          color: tn.color,
+        
         ),
       ),
     );
+
+
+
+
+
   }
 }
