@@ -1,14 +1,15 @@
+import 'dart:ui';
 import 'package:audioplayers/audioplayers.dart';
-import 'package:flutter/material.dart';
 
-class TuneModel {
+class Tune {
   final Color color;
   final String sound;
 
-  const TuneModel({required this.color, required this.sound});
+  const Tune({required this.color, required this.sound});
 
-  playSound() {
-    final player = AudioPlayer();
-    player.play(AssetSource(sound));
+  // Method to play the sound
+  void playSound() {
+    final player = AudioPlayer(); // Create a new audio player instance
+    player.play(AssetSource(sound)); // Play the sound from assets
   }
 }
